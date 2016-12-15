@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/main.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+<meta name="description" content="Neighborhood Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container">
+    <div class="options-box">
+      <h1>Welcome to My Neighbourhood!</h1>
+      <div>
+        <input id="show-listings" type="button" value="Full View">
+        <div id="search-container">
+          <div id="search-nav">
+            <form>
+              <input id="search" placeholder="Please Enter Location" type="search" data-bind="value: query, textInput: query, valueUpdate: 'keyup'" autocomplete="off"></input>
+            </form>
+            <hr>
+            <div class="liveExample" >
+              <select id="liveExample" multiple="multiple" width="50" data-bind= 'options: locationsArray, optionsText: "text", optionsValue: "value", value: "value"'></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  <div id="map"></div>
+</div>
+</script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/map.js"></script>
+<script type="text/javascript" src="js/lib/knockout-3.3.0.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://knockoutjs.com/downloads/jquery.tmpl.min.js"></script>
+<script src="http://knockoutjs.com/downloads/knockout-1.2.1.debug.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDHGCTR0OCPhtDziLNfWmYmmw51P4fQHpw&v=3&callback=initMap" onerror="errorThrown()"></script>
+</script>
+</body>
+</html>
